@@ -6,6 +6,9 @@
 # docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name my_blank_page my_blank_page
 
 # For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
+#agriosidad
+RUN chmod +x ./bin/*
+
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version
 ARG RUBY_VERSION=3.2.2
@@ -41,6 +44,9 @@ RUN bundle install && \
 
 # Copy application code
 COPY . .
+
+
+
 
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
