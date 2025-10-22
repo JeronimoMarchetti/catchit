@@ -81,7 +81,7 @@ Rails.application.configure do
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   config.hosts = [
-   
+   "rails-production-f708.up.railway.app",
     /.*\.railway\.app/ 
   ]
   #
